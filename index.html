@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search for Abducted and Strayed Individuals</title>
     <style>
         body {
@@ -52,7 +54,7 @@
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 4px 8px pink;
-            box-sizing: 100px;
+            box-sizing: border-box;
             height: 210px;
         }
         button {
@@ -81,29 +83,10 @@
             margin: 50px;
             height: 230px;
         }
-        .dashboard1 {
-            color: black;
-            background-color: rgb(33, 183, 78);
-            padding: 10px;
-            border-radius: 5px;
-            align-items: center;
-            text-align: center;
-            margin: 4px;
-            width: 200px;
-            height: 25px;
-        }
-        .dashboard2 {
-            color: black;
-            background-color: rgb(33, 183, 78);
-            padding: 10px;
-            border-radius: 5px;
-            align-items: center;
-            text-align: center;
-            margin: 4px;
-            width: 200px;
-            height: 25px;
-        }
-        .dashboard3 {
+        .dashboard1,
+        .dashboard2,
+        .dashboard3,
+        .dashboard4 {
             color: black;
             background-color: rgb(33, 183, 78);
             padding: 10px;
@@ -115,24 +98,15 @@
             height: 25px;
         }
         .dashboard4 {
-            color: black;
-            background-color: rgb(35, 121, 68);
-            padding: 10px;
-            border-radius: 5px;
-            align-items: center;
-            text-align: center;
-            margin: 4px;
-            width: 200px;
-            height: 25px;
+            background-color: rgb(33, 183, 78);
         }
-
         .chart-container {
             background-color: aliceblue;
             width: 570px;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 4px 8px pink;
-            box-sizing: 100px;
+            box-sizing: border-box;
             height: 300px;
         }
         canvas {
@@ -154,7 +128,7 @@
             <script>
                 const locationElement = document.getElementById("location");
                 function updateLocation() {
-                    locationElement.textContent = Lat: ${(Math.random() * 180 - 90).toFixed(4)}° N, Lon: ${(Math.random() * 360 - 180).toFixed(4)}° W;
+                    locationElement.textContent = `Lat: ${(Math.random() * 180 - 90).toFixed(4)}° N, Lon: ${(Math.random() * 360 - 180).toFixed(4)}° W`;
                 }
                 setInterval(updateLocation, 2000); // Update location every 2 seconds
             </script>
@@ -213,5 +187,5 @@
             </script>
         </div>
     </main>
-  </body>
+  </body>
 </html>
